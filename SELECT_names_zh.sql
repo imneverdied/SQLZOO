@@ -20,7 +20,7 @@ SELECT name FROM world
 --找出所有國家,其名字包括字母x。
 
 SELECT name FROM world
-  WHERE name LIKE '%x%'
+  WHERE name LIKE '%x%';
   
 4.
 
@@ -29,7 +29,7 @@ SELECT name FROM world
 --找出所有國家,其名字以 land 作結尾。
 
 SELECT name FROM world
-  WHERE name LIKE '%land'
+  WHERE name LIKE '%land';
   
 5.
 
@@ -38,7 +38,7 @@ SELECT name FROM world
 --找出所有國家,其名字以 C 作開始,ia 作結尾。
 
 SELECT name FROM world
-  WHERE name LIKE 'c%ia'
+  WHERE name LIKE 'c%ia';
   
 6.
 --“Greece 希臘”中有雙 e 字。哪個國家有雙 o 字呢?
@@ -46,7 +46,7 @@ SELECT name FROM world
 --找出所有國家,其名字包括字母oo。
 
 SELECT name FROM world
-  WHERE name LIKE '%oo%'
+  WHERE name LIKE '%oo%';
   
 7.
 --“Bahamas 巴哈馬”中有三個 a,還有嗎?
