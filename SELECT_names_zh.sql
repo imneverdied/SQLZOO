@@ -56,5 +56,66 @@ SELECT name FROM world
 SELECT name FROM world
   WHERE name LIKE '%a%a%a%';
 8.
+/*“India 印度”和”Angola 安哥拉”的第二個字母都是 n。
+你可以用底線符_當作單一個字母的萬用字元。
+
+SELECT name FROM world
+ WHERE name LIKE '_n%'
+ORDER BY name
+找出所有國家,其名字以t作第二個字母。
+*/
+
+SELECT name FROM world
+ WHERE name LIKE '_t%'
+ORDER BY name;
+
 9.
+--“Lesotho 賴索托”和”Moldova 摩爾多瓦”都有兩個字母 o,被另外兩個字母相隔着。
+
+--找出所有國家,其名字都有兩個字母 o,被另外兩個字母相隔着。
+
+SELECT name FROM world
+ WHERE name LIKE '%o__o%';
+ 
 10.
+--“Cuba古巴”和”Togo 多哥”都是 4 個字母。
+
+--找出所有國家,其名字都是 4 個字母的。
+
+SELECT name FROM world
+ WHERE name LIKE '____'
+ 
+ 11.
+ --“Luxembourg 盧森堡”的首都 capital 都同樣叫“Luxembourg”。
+
+--顯示所有國家名字,其首都和國家名字是相同的。
+
+SELECT name
+  FROM world
+ WHERE name = capital;
+ 
+ 12.
+/* “Mexico 墨西哥”的首都是”Mexico City”。
+
+顯示所有國家名字,其首都是國家名字加上”City”。
+
+concat函數
+ 函數concat 可以用來合拼兩個或以上的字串。*/
+ 
+ SELECT name
+  FROM world
+ WHERE capital = concat(name, ' City');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
