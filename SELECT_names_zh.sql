@@ -106,16 +106,30 @@ concat函數
   FROM world
  WHERE capital = concat(name, ' City');
 
+13.
+--找出所有首都和其國家名字,而首都要有國家名字中出現。
 
+SELECT capital,name 
+FROM world 
+WHERE capital LIKE concat('%', name, '%');
 
+14.
+/*
+找出所有首都和其國家名字,而首都是國家名字的延伸。
+你應顯示 Mexico City,因它比其國家名字 Mexico 長。
+你不應顯示 Luxembourg,因它的首都和國家名相是相同的。
+*/
 
+SELECT name, capital 
+FROM world 
+WHERE capital LIKE concat('%', name, '%') AND capital > name;
 
+15.
+--"Monaco-Ville"是合併國家名字 "Monaco" 和延伸詞"-Ville".
+--顯示國家名字，及其延伸詞，如首都是國家名字的延伸。
 
+--你可以使用SQL函數 REPLACE 或 MID.
 
-
-
-
-
-
-
-
+SELECT name, REPLACE(capital, name, '') 
+FROM world 
+WHERE capital LIKE concat('%', name, '%') AND capital > name;
